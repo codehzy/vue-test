@@ -1,4 +1,3 @@
-import { defineAsyncComponent } from "vue";
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
 const routes: RouteRecordRaw[] = [
@@ -8,12 +7,17 @@ const routes: RouteRecordRaw[] = [
     name: "hello-world",
     component: () => import("../components/index.vue"),
   },
-  // // 视频滚动小窗显示
-  // {
-  //   path: "/video",
-  //   name: "video",
-  //   component: defineAsyncComponent(() => import("../components/video.vue")),
-  // },
+  // 视频滚动小窗显示
+  {
+    path: "/video",
+    name: "video",
+    component: () => import("../components/video/index.vue"),
+  },
+  {
+    path: "/transtion",
+    name: "transtion",
+    component: () => import("../components/transtion/index.vue"),
+  },
 ];
 
 const router = createRouter({
