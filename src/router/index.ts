@@ -18,6 +18,11 @@ const routes: RouteRecordRaw[] = [
     name: "transtion",
     component: () => import("../components/transtion/index.vue"),
   },
+  {
+    path: "/numberTransition",
+    name: "numberTransition",
+    component: () => import("../components/numberTransition/index.vue"),
+  },
 ];
 
 const router = createRouter({

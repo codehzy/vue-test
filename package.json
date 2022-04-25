@@ -10,6 +10,7 @@
   "dependencies": {
     "@types/axios": "^0.14.0",
     "@vueuse/core": "^8.2.4",
+    "gsap": "^3.10.4",
     "lodash": "^4.17.21",
     "sass": "^1.49.11",
     "sass-loader": "^12.6.0",
