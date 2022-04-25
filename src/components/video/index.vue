@@ -6,10 +6,13 @@
   <div class="observerContainer" id="videoContainer"></div>
 
   <!-- 初始化播放的大视频窗口 -->
-  <div class="bigBox">
+  <!-- <div class="bigBox">
     <teleport to="#small" :disabled="isVisibleTarget">
       <div id="mse"></div>
     </teleport>
+  </div> -->
+  <div class="bigBox">
+    <div id="mse"></div>
   </div>
 
   <!-- 模拟滚动 -->
@@ -17,11 +20,11 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref } from "vue";
-import Player from "xgplayer";
-import { useIntersectionObserver } from "@vueuse/core";
+import { onMounted, ref } from 'vue'
+import Player from 'xgplayer'
+import { useIntersectionObserver } from '@vueuse/core'
 
-const isVisibleTarget = ref(true);
+const isVisibleTarget = ref(true)
 
 // const getVideo = (): string => {
 //   return new Promise((resolve, reject) => {
@@ -31,19 +34,19 @@ const isVisibleTarget = ref(true);
 
 onMounted(() => {
   new Player({
-    id: "mse",
+    id: 'mse',
     url: `https://media.w3.org/2010/05/sintel/trailer.mp4`,
-    poster: "https://i.ytimg.com/vi/lK2ZbbQSHww/hqdefault.jpg",
-    playbackRate: [0.5, 0.75, 1, 1.5, 2], //传入倍速可选数组
-  });
+    poster: 'https://i.ytimg.com/vi/lK2ZbbQSHww/hqdefault.jpg',
+    playbackRate: [0.5, 0.75, 1, 1.5, 2] //传入倍速可选数组
+  })
 
   const { stop } = useIntersectionObserver(
-    document.getElementById("videoContainer"),
+    document.getElementById('videoContainer'),
     ([{ isIntersecting }]) => {
-      isVisibleTarget.value = isIntersecting;
+      isVisibleTarget.value = isIntersecting
     }
-  );
-});
+  )
+})
 </script>
 
 <style lang="scss" scoped>
