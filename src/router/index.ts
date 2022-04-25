@@ -23,6 +23,11 @@ const routes: RouteRecordRaw[] = [
     name: "numberTransition",
     component: () => import("../components/numberTransition/index.vue"),
   },
+  {
+    path: "/botherCommunicate",
+    name: "botherCommunicate",
+    component: () => import("../components/botherCommunicate/index.vue"),
+  },
 ];
 
 const router = createRouter({
