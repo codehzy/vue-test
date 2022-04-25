@@ -28,6 +28,11 @@ const routes: RouteRecordRaw[] = [
     name: "botherCommunicate",
     component: () => import("../components/botherCommunicate/index.vue"),
   },
+  {
+    path: "/un-import",
+    name: "un-import",
+    component: () => import("../components/un-import/index.vue"),
+  },
 ];
 
 const router = createRouter({
