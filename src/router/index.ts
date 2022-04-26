@@ -52,6 +52,11 @@ const routes: RouteRecordRaw[] = [
     path: '/vueMarkdown',
     name: 'vueMarkdown',
     component: () => import('../components/vueMarkdown/index.vue')
+  },
+  {
+    path: '/dragComponent',
+    name: 'dragComponent',
+    component: () => import('../components/dragComponent/component/index.vue')
   }
 ]
 
