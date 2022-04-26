@@ -47,6 +47,11 @@ const routes: RouteRecordRaw[] = [
     path: '/FnVDirective',
     name: 'FnVDirective',
     component: () => import('../components/FnVDirective/index.vue')
+  },
+  {
+    path: '/vueMarkdown',
+    name: 'vueMarkdown',
+    component: () => import('../components/vueMarkdown/index.vue')
   }
 ]
 

@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { defineAsyncComponent, ref } from "vue";
-import ContentLoader from "./Skeleton/ContentLoader.vue";
+import { defineAsyncComponent, ref } from 'vue'
+import ContentLoader from './Skeleton/ContentLoader.vue'
 
 // 骨架屏
-const Skeleton = defineAsyncComponent(() => import("./Skeleton/index.vue"));
+const Skeleton = defineAsyncComponent(() => import('./Skeleton/index.vue'))
 
-const count = ref(0);
+const count = ref(0)
 </script>
 
 <template>
