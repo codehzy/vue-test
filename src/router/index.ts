@@ -37,6 +37,16 @@ const routes: RouteRecordRaw[] = [
     path: '/deepVModel',
     name: 'deepVModel',
     component: () => import('../components/deepVModel/index.vue')
+  },
+  {
+    path: '/customVDirective',
+    name: 'customVDirective',
+    component: () => import('../components/customVDirective/index.vue')
+  },
+  {
+    path: '/FnVDirective',
+    name: 'FnVDirective',
+    component: () => import('../components/FnVDirective/index.vue')
   }
 ]
 
