@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router/index'
 import mitt from 'mitt'
 import { createHead } from '@vueuse/head' // <--
+import Loading from './components/pluginDialog/component/index'
 
 const Mitt = mitt()
 const head = createHead()
@@ -24,11 +25,17 @@ type Filter = {
   format<T extends any>(str: T): string
 }
 
+type Load = {
+  show: () => void
+  hide: () => void
+}
+
 declare module 'vue' {
   export interface ComponentCustomProperties {
     $Bus: typeof Mitt
     $filters: Filter
+    $loading: Load
   }
 }
 
-app.use(router).use(head).mount('#app')
+app.use(router).use(head).use(Loading).mount('#app')

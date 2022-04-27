@@ -62,6 +62,11 @@ const routes: RouteRecordRaw[] = [
     path: '/globalFilter',
     name: 'globalFilter',
     component: () => import('../components/globalFilter/index.vue')
+  },
+  {
+    path: '/pluginDialog',
+    name: 'pluginDialog',
+    component: () => import('../components/pluginDialog/index.vue')
   }
 ]
 
