@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router/index'
 import mitt from 'mitt'
 import { createHead } from '@vueuse/head' // <--
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 import Loading from './components/pluginDialog/component/index'
 
 const Mitt = mitt()
@@ -38,4 +40,4 @@ declare module 'vue' {
   }
 }
 
-app.use(router).use(head).use(Loading).mount('#app')
+app.use(router).use(head).use(Loading).use(ElementPlus).mount('#app')

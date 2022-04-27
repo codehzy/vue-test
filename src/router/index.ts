@@ -67,6 +67,11 @@ const routes: RouteRecordRaw[] = [
     path: '/pluginDialog',
     name: 'pluginDialog',
     component: () => import('../components/pluginDialog/index.vue')
+  },
+  {
+    path: '/initElementPlus',
+    name: 'initElementPlus',
+    component: () => import('../components/initElementPlus/index.vue')
   }
 ]
 
