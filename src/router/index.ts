@@ -57,6 +57,11 @@ const routes: RouteRecordRaw[] = [
     path: '/dragComponent',
     name: 'dragComponent',
     component: () => import('../components/dragComponent/component/index.vue')
+  },
+  {
+    path: '/globalFilter',
+    name: 'globalFilter',
+    component: () => import('../components/globalFilter/index.vue')
   }
 ]
 

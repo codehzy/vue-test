@@ -4,6 +4,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import VueJsx from '@vitejs/plugin-vue-jsx'
 import MarkDown from 'vite-plugin-md'
 import * as path from 'path'
+import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -18,7 +19,8 @@ export default defineConfig({
     }),
     MarkDown({
       headEnabled: true
-    })
+    }),
+    VitePWA()
   ],
   server: {
     host: true
