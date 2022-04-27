@@ -8,8 +8,18 @@
     <el-button type="danger">Danger</el-button>
     <el-button>中文</el-button>
   </el-row>
+
+  <el-input v-model="input" placeholder="Please input" class="finalInput" />
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const input = ref('')
+</script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.finalInput {
+  :deep(input) {
+    background-color: skyblue;
+  }
+}
+</style>
