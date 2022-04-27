@@ -72,6 +72,11 @@ const routes: RouteRecordRaw[] = [
     path: '/initElementPlus',
     name: 'initElementPlus',
     component: () => import('../components/initElementPlus/index.vue')
+  },
+  {
+    path: '/piniaStore',
+    name: 'piniaStore',
+    component: () => import('../components/piniaStore/index.vue')
   }
 ]
 
