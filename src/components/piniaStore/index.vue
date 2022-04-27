@@ -51,8 +51,8 @@ const resetMainStore = () => {
 /** 订阅state改变触发的函数 */
 MainStore.$subscribe(
   (args, state) => {
-    console.log('args', args)
-    console.log('state', state)
+    // console.log('args', args)
+    // console.log('state', state)
   },
   {
     detached: true
@@ -61,13 +61,13 @@ MainStore.$subscribe(
 
 /** 订阅action被调用就走的函数 */
 MainStore.$onAction((args) => {
-  args.after(() => {
-    console.log(`after`)
-  })
-  console.log(args)
-  args.onError((error) => {
-    console.log(error)
-  })
+  // args.after(() => {
+  //   console.log(`after`)
+  // })
+  // console.log(args)
+  // args.onError((error) => {
+  //   console.log(error)
+  // })
 }, true)
 </script>
 

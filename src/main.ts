@@ -7,11 +7,18 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import Loading from './components/pluginDialog/component/index'
 import { createPinia } from 'pinia'
+import { piniaPlugin } from './piniaPlugin/index'
 
 const Mitt = mitt()
 const head = createHead()
 const store = createPinia()
 const app = createApp(App)
+
+store.use(
+  piniaPlugin({
+    key: 'pinia'
+  })
+)
 
 // 全局挂在Mitt
 app.config.globalProperties.$Bus = Mitt
