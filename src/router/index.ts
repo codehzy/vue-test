@@ -77,6 +77,11 @@ const routes: RouteRecordRaw[] = [
     path: '/piniaStore',
     name: 'piniaStore',
     component: () => import('../components/piniaStore/index.vue')
+  },
+  {
+    path: '/viewEcharts',
+    name: 'viewEcharts',
+    component: () => import('../components/viewEcharts/index.vue')
   }
 ]
 
