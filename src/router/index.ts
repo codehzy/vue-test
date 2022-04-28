@@ -82,6 +82,11 @@ const routes: RouteRecordRaw[] = [
     path: '/viewEcharts',
     name: 'viewEcharts',
     component: () => import('../components/viewEcharts/index.vue')
+  },
+  {
+    path: '/multLine',
+    name: 'multLine',
+    component: () => import('../components/multLine/index.vue')
   }
 ]
 
