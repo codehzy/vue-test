@@ -12,3 +12,5 @@ declare module '*.md' {
   const Component: DefineComponent
   export default Component
 }
+
+type ComponentSize = any

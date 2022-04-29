@@ -5,6 +5,7 @@
 </template>
 
 <style>
+/*@charset "UTF-8";*/
 #app,
 body,
 html {

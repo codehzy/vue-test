@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const server = axios.create({
-  baseURL: 'http://localhost:3333'
+  baseURL: 'http://106.13.37.227:9999'
 })
 
-export const getApiList = () => server.get('/api/list').then((res) => res.data)
+export const getApiList = () => server.get('/covid19').then((res) => res.data)
