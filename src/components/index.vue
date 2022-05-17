@@ -1,20 +1,7 @@
-<script setup lang="ts">
-import { defineAsyncComponent, ref } from 'vue'
-import ContentLoader from './Skeleton/ContentLoader.vue'
-
-// 骨架屏
-const Skeleton = defineAsyncComponent(() => import('./Skeleton/index.vue'))
-
-const count = ref(0)
-</script>
-
 <template>
-  <Suspense>
-    <template #default>
-      <Skeleton></Skeleton>
-    </template>
-    <template #fallback> <ContentLoader></ContentLoader></template>
-  </Suspense>
+  <div>首页</div>
 </template>
 
-<style scoped></style>
+<script lang="ts" setup></script>
+
+<style lang="scss" scoped></style>

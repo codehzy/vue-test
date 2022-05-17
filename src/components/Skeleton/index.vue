@@ -1,30 +1,20 @@
-<template>
-  <div>
-    <img
-      :src="imgUrl"
-      style="display: inline-block; width: 200px; height: 180px"
-      v-for="i in 100"
-    />
-  </div>
-</template>
+<script setup lang="ts">
+import { defineAsyncComponent, ref } from 'vue'
+import ContentLoader from './components/ContentLoader.vue'
 
-<script lang="ts" setup>
-import axios from "axios";
-import { ref } from "vue";
-const imgUrl = ref("");
+// 骨架屏
+const Skeleton = defineAsyncComponent(() => import('./components/dog.vue'))
 
-const { data } = await axios({
-  method: "get",
-  url: "https://dog.ceo/api/breeds/image/random",
-  timeout: 5000,
-});
-
-imgUrl.value = data.message;
+const count = ref(0)
 </script>
 
-<style lang="scss" scoped>
-div {
-  height: 100%;
-  width: 100%;
-}
-</style>
+<template>
+  <Suspense>
+    <template #default>
+      <Skeleton></Skeleton>
+    </template>
+    <template #fallback> <ContentLoader></ContentLoader></template>
+  </Suspense>
+</template>
+
+<style scoped></style>

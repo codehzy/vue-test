@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ContentLoader } from "vue-content-loader";
+import { ContentLoader } from 'vue-content-loader'
 </script>
 
 <style lang="scss" scoped></style>

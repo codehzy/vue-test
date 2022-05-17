@@ -1,11 +1,17 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw[] = [
-  // 首页骨架屏
+  // 首页
   {
     path: '/',
-    name: 'hello-world',
+    name: 'home',
     component: () => import('../components/index.vue')
+  },
+  // 骨架屏
+  {
+    path: '/dogSkeleton',
+    name: 'hello-world',
+    component: () => import('../components/Skeleton/index.vue')
   },
   // 视频滚动小窗显示
   {
