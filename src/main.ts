@@ -8,6 +8,7 @@ import 'element-plus/dist/index.css'
 import Loading from './components/pluginDialog/component/index'
 import { createPinia } from 'pinia'
 import { piniaPlugin } from './piniaPlugin/index'
+import './assets/tailwind/index.css'
 
 const Mitt = mitt()
 const head = createHead()

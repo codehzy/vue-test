@@ -93,6 +93,11 @@ const routes: RouteRecordRaw[] = [
     path: '/multLine',
     name: 'multLine',
     component: () => import('../components/multLine/index.vue')
+  },
+  {
+    path: '/tailwind',
+    name: 'tailwind',
+    component: () => import('../components/tailwind/tailwind.vue')
   }
 ]
 
